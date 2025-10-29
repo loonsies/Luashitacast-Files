@@ -5,17 +5,17 @@ local sets = {
     ['TP'] = {
         Main = 'Naegling',
         Sub = 'Blurred Shield +1',
-        Ammo = 'Coiste Bodhar',
+        Ammo = { Name = 'Coiste Bodhar', AugPath='A' },
         Head = 'Boii Mask +2',
         Neck = 'War. Beads +1',
         Ear1 = 'Brutal Earring',
-        Ear2 = 'Mache Earring +1',
-        Body = 'Sakpata\'s Plate',
-        Hands = 'Sakpata\'s Gauntlets',
+        Ear2 = { Name = 'Boii Earring', Augment = { [1] = 'Accuracy+6', [2] = 'Mag. Acc.+6' } },
+        Body = { Name = 'Sakpata\'s Plate', AugPath='A' },
+        Hands = { Name = 'Sakpata\'s Gauntlets', AugPath='A' },
         Ring1 = 'Chirich Ring +1',
         Ring2 = 'Chirich Ring +1',
         Back = { Name = 'Cichol\'s Mantle', Augment = { [1] = 'Phys. dmg. taken -10%', [2] = 'STR+30', [3] = 'Accuracy+20', [4] = 'Attack+20', [5] = 'Weapon skill damage +10%' } },
-        Waist = { Name = 'Sailfi Belt +1', AugPath = 'A' },
+        Waist = { Name = 'Sailfi Belt +1', AugPath='A' },
         Legs = 'Pumm. Cuisses +3',
         Feet = 'Pumm. Calligae +3',
     },
@@ -76,13 +76,13 @@ local sets = {
     },
     ['Retaliation'] = {
         Hands = 'Pumm. Mufflers',
-        Legs = 'Boii Calligae +1'
+        Legs = 'Boii Calligae +2'
     },
     ['WarriorsCharge'] = {
         Legs = 'Agoge Cuisses'
     },
     ['BloodRage'] = {
-        Body = 'Boii Lorica +1',
+        Body = 'Boii Lorica +2',
     },
     ['Restraint'] = {
         Hands = 'Boii Mufflers +2',

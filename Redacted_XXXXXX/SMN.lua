@@ -2,7 +2,21 @@ local profile = {}
 looneylib = gFunc.LoadFile('../common/looneylib.lua')
 
 local sets = {
-    Idle = {
+    ['Idle'] = {
+        Main = 'Marquetry Staff',
+        Ammo = { Name = 'Ghastly Tathlum +1', AugPath='A' },
+        Head = { Name = 'Nyame Helm', AugPath='B' },
+        Neck = 'Adad Amulet',
+        Ear1 = 'Lugalbanda Earring',
+        Ear2 = 'Etiolation Earring',
+        Body = { Name = 'Nyame Mail', AugPath='B' },
+        Hands = { Name = 'Merlinic Dastanas', Augment = { [1] = 'Pet: INT+7', [2] = 'Pet: Attack+3', [3] = 'Pet: Rng.Atk.+3', [4] = 'Pet: Mag. Acc.+12', [5] = 'Blood Pact Dmg.+9' } },
+        Ring1 = 'Defending Ring',
+        Ring2 = 'Stikini Ring +1',
+        Back = 'Scintillating Cape',
+        Waist = 'Regal Belt',
+        Legs = { Name = 'Nyame Flanchard', AugPath='B' },
+        Feet = { Name = 'Nyame Sollerets', AugPath='B' },
     },
 }
 profile.Sets = sets

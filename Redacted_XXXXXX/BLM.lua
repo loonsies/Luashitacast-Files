@@ -3,7 +3,7 @@ looneylib = gFunc.LoadFile('../common/looneylib.lua')
 
 local sets = {
     ['Idle'] = {
-        Main = 'Homestead Staff',
+        Main = 'Grioavolr',
         Ammo = 'Staunch Tathlum +1',
         Head = 'Nyame Helm',
         Neck = { Name = 'Loricate Torque +1', AugPath = 'A' },
@@ -23,7 +23,7 @@ local sets = {
         Ring1 = 'Stikini Ring +1',
     },
     ['Midcast'] = {
-        Main = 'Homestead Staff',
+        Main = 'Grioavolr',
         Ammo = 'Ghastly Tathlum +1',
         Head = 'Jhakri Coronal +2',
         Neck = 'Baetyl Pendant',
@@ -38,7 +38,7 @@ local sets = {
         Feet = 'Jhakri Pigaches +2',
     },
     ['Precast'] = {
-        Main = 'Homestead Staff',
+        Main = 'Grioavolr',
         Ammo = 'Sapience Orb',
         Head = 'Jhakri Coronal +2',
         Neck = 'Baetyl Pendant',
@@ -54,7 +54,7 @@ local sets = {
     }
     ,
     ['TH'] = {
-        Main = 'Homestead Staff',
+        Main = 'Grioavolr',
         Ammo = 'Per. Lucky Egg',
         Head = 'Wh. Rarab Cap +1',
         Neck = { Name = 'Loricate Torque +1', AugPath = 'A' },
@@ -77,23 +77,23 @@ local displaySets = { 'Idle', 'Midcast', 'Spell', 'TH' }
 profile.Packer = {
 }
 
-profile.OnLoad = function ()
+profile.OnLoad = function()
     gSettings.AllowAddSet = true
     looneylib.initialize(displaySets, vars)
 
-    ashita.tasks.once(4, function ()
+    ashita.tasks.once(4, function()
         AshitaCore:GetChatManager():QueueCommand(1, '/lockstyleset 9')
-        ashita.tasks.once(1, function ()
+        ashita.tasks.once(1, function()
             AshitaCore:GetChatManager():QueueCommand(1, '/sl blink')
         end)
     end)
 end
 
-profile.HandleCommand = function (args)
+profile.HandleCommand = function(args)
     looneylib.handleCommands(args)
 end
 
-profile.HandleDefault = function ()
+profile.HandleDefault = function()
     gFunc.EquipSet(sets.Idle)
 
     if gData.GetPlayer().HPP > 70 and gData.GetPlayer().MPP < 95 then
@@ -109,18 +109,18 @@ profile.HandleDefault = function ()
     looneylib.checkDefault()
 end
 
-profile.HandleAbility = function ()
+profile.HandleAbility = function()
 end
 
-profile.HandlePrecast = function ()
+profile.HandlePrecast = function()
     gFunc.EquipSet(sets.Precast)
 end
 
-profile.HandleMidcast = function ()
+profile.HandleMidcast = function()
     gFunc.EquipSet(sets.Midcast)
 end
 
-profile.HandleWeaponskill = function ()
+profile.HandleWeaponskill = function()
     local canWS = looneylib.checkWsBailout()
     if (canWS == false) then
         gFunc.CancelAction()

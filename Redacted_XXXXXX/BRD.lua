@@ -16,7 +16,7 @@ local sets = {
         Hands = 'Nyame Gauntlets',
         Ring1 = 'Defending Ring',
         Ring2 = 'Chirich Ring +1',
-        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Magic Damage+20', [2] = 'CHR+20', [3] = '"Fast Cast"+10', [4] = 'Mag. Acc.+30' } },
+        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Phys. dmg. taken -10%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
         Waist = 'Flume Belt',
         Legs = 'Nyame Flanchard',
         Feet = 'Nyame Sollerets',
@@ -29,7 +29,7 @@ local sets = {
     },
     ['IdleRefresh'] = {
         Ear2 = 'Ethereal Earring',
-        Ring1 = 'Stikini Ring +1',
+        Ring2 = 'Stikini Ring +1',
     },
     ['Precast'] = {
         Main = { Name = 'Kali', AugPath = 'C' },
@@ -46,12 +46,12 @@ local sets = {
         Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Magic Damage+20', [2] = 'CHR+20', [3] = '"Fast Cast"+10', [4] = 'Mag. Acc.+30' } },
         Waist = 'Flume Belt',
         Legs = { Name = 'Kaykaus Tights +1', AugPath = 'A' },
-        Feet = 'Fili Cothurnes +1',
+        Feet = 'Fili Cothurnes +2',
     },
     ['PrecastCure'] = {
         Main = 'Naegling',
         Sub = 'Genmei Shield',
-        Ammo = 'Sapience Orb',
+        Range = { Name = 'Linos', Augment = '"Fast Cast"+4' },
         Head = 'Nahtirah Hat',
         Neck = 'Baetyl Pendant',
         Ear1 = 'Loquac. Earring',
@@ -80,12 +80,12 @@ local sets = {
         Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Magic Damage+20', [2] = 'CHR+20', [3] = '"Fast Cast"+10', [4] = 'Mag. Acc.+30' } },
         Waist = 'Flume Belt',
         Legs = { Name = 'Kaykaus Tights +1', AugPath = 'A' },
-        Feet = 'Fili Cothurnes +1',
+        Feet = 'Fili Cothurnes +2',
     },
     ['Midcast'] = {
         Main = { Name = 'Kali', AugPath = 'C' },
         Head = 'Fili Calot +2',
-        Neck = 'Mnbw. Whistle +1',
+        Neck = 'Mnbw. Whistle +1h',
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Etiolation Earring',
         Body = 'Fili Hongreline +2',
@@ -119,7 +119,7 @@ local sets = {
         Sub = 'Genmei Shield',
         Range = { Name = 'Gjallarhorn', AugTrial = 3591 },
         Head = 'Brioso Roundlet +2',
-        Neck = 'Mnbw. Whistle +1',
+        Neck = 'Mnbw. Whistle +1h',
         Ear1 = 'Crep. Earring',
         Ear2 = 'Gwati Earring',
         Body = 'Brioso Justau. +3',
@@ -136,7 +136,7 @@ local sets = {
         Sub = 'Genmei Shield',
         Range = { Name = 'Daurdabla', AugTrial = 3590 },
         Head = 'Brioso Roundlet +2',
-        Neck = 'Mnbw. Whistle +1',
+        Neck = 'Mnbw. Whistle +1h',
         Ear1 = 'Crep. Earring',
         Ear2 = 'Gersemi Earring',
         Body = 'Brioso Justau. +3',
@@ -153,7 +153,7 @@ local sets = {
         Sub = 'Genmei Shield',
         Ammo = 'Pemphredo Tathlum',
         Head = 'Brioso Roundlet +2',
-        Neck = 'Mnbw. Whistle +1',
+        Neck = 'Mnbw. Whistle +1h',
         Ear1 = 'Crep. Earring',
         Ear2 = 'Gwati Earring',
         Body = 'Brioso Justau. +3',
@@ -166,34 +166,36 @@ local sets = {
         Feet = 'Brioso Slippers +3',
     },
     ['TP'] = {
+        Main = 'Naegling',
         Range = { Name = 'Linos', Augment = { [1] = 'Accuracy+13', [2] = '"Store TP"+4', [3] = 'Attack+13', [4] = 'Quadruple Attack +3' } },
-        Head = 'Bunzi\'s Hat',
+        Head = { Name = 'Bunzi\'s Hat', AugPath = 'A' },
         Neck = { Name = 'Bard\'s Charm +1', AugPath = 'A' },
-        Ear1 = 'Eabani Earring',
+        Ear1 = 'Crep. Earring',
         Ear2 = 'Cessance Earring',
-        Body = 'Nyame Mail',
-        Hands = 'Nyame Gauntlets',
+        Body = 'Ayanmo Corazza +2',
+        Hands = { Name = 'Gazu Bracelets +1', AugPath = 'A' },
         Ring1 = 'Chirich Ring +1',
         Ring2 = 'Chirich Ring +1',
-        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Damage taken-5%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
+        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Phys. dmg. taken -10%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
         Waist = { Name = 'Sailfi Belt +1', AugPath = 'A' },
-        Legs = 'Nyame Flanchard',
-        Feet = 'Nyame Sollerets',
+        Legs = { Name = 'Nyame Flanchard', AugPath = 'B' },
+        Feet = { Name = 'Nyame Sollerets', AugPath = 'B' },
     },
     ['WS'] = {
+        Main = 'Naegling',
         Range = { Name = 'Linos', Augment = { [1] = 'Accuracy+9', [2] = 'STR+8', [3] = 'Attack+9', [4] = 'Weapon skill damage +3%' } },
-        Head = 'Nyame Helm',
+        Head = { Name = 'Nyame Helm', AugPath = 'B' },
         Neck = { Name = 'Bard\'s Charm +1', AugPath = 'A' },
         Ear1 = { Name = 'Moonshade Earring', Augment = { [1] = 'Attack+4', [2] = 'TP Bonus +250' } },
         Ear2 = 'Brutal Earring',
-        Body = 'Nyame Mail',
-        Hands = 'Nyame Gauntlets',
+        Body = { Name = 'Nyame Mail', AugPath = 'B' },
+        Hands = { Name = 'Nyame Gauntlets', AugPath = 'B' },
         Ring1 = 'Chirich Ring +1',
         Ring2 = 'Chirich Ring +1',
-        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Damage taken-5%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
+        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'STR+30', [2] = 'Weapon skill damage +10%', [3] = 'Attack+20', [4] = 'Accuracy+20' } },
         Waist = { Name = 'Sailfi Belt +1', AugPath = 'A' },
-        Legs = 'Nyame Flanchard',
-        Feet = 'Nyame Sollerets',
+        Legs = { Name = 'Nyame Flanchard', AugPath = 'B' },
+        Feet = { Name = 'Nyame Sollerets', AugPath = 'B' },
     },
     ['Capacity'] = {
         Main = 'Naegling',
@@ -222,10 +224,10 @@ local sets = {
         Ear1 = 'Eabani Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Ayanmo Corazza +2',
-        Hands = 'Aya. Manopolas +2',
+        Hands = { Name = 'Chironic Gloves', Augment = { [1] = 'STR+5', [2] = '"Fast Cast"+1', [3] = '"Treasure Hunter"+1' } },
         Ring1 = 'Chirich Ring +1',
         Ring2 = 'Chirich Ring +1',
-        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Damage taken-5%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
+        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Phys. dmg. taken -10%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
         Waist = 'Chaac Belt',
         Legs = 'Aya. Cosciales +2',
         Feet = 'Aya. Gambieras +2',
@@ -260,10 +262,18 @@ local sets = {
         Hands = 'Nyame Gauntlets',
         Ring1 = 'Chirich Ring +1',
         Ring2 = 'Chirich Ring +1',
-        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Damage taken-5%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
+        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Phys. dmg. taken -10%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
         Waist = { Name = 'Sailfi Belt +1', AugPath = 'A' },
         Legs = 'Nyame Flanchard',
         Feet = 'Nyame Sollerets',
+    }
+    ,
+    ['adadad'] = {
+        Main = 'Qutrub Knife',
+        Neck = 'Bathy Choker +1',
+        Ring1 = 'Defending Ring',
+        Ring2 = 'Chirich Ring +1',
+        Back = { Name = 'Intarabus\'s Cape', Augment = { [1] = 'Phys. dmg. taken -10%', [2] = 'Accuracy+20', [3] = 'Attack+20', [4] = '"Store TP"+10', [5] = 'DEX+30' } },
     }
 }
 
@@ -340,7 +350,7 @@ profile.OnLoad = function ()
     looneylib.initialize(displaySets)
 
     local dw = AshitaCore:GetResourceManager():GetAbilityByName('Dual Wield', 0);
-    hasDW = AshitaCore:GetMemoryManager():GetPlayer():HasAbility(dw.Id);
+    hasDW = AshitaCore:GetMemoryManager():GetPlayer():HasAbility(dw.Id) and gData.GetPlayer().SubJobLevel > 0;
 
     ashita.tasks.once(4, function ()
         AshitaCore:GetChatManager():QueueCommand(1, '/lockstyleset 15')
@@ -357,27 +367,21 @@ profile.HandleCommand = function (args)
 end
 
 profile.HandleDefault = function ()
-    local dw = AshitaCore:GetResourceManager():GetAbilityByName('Dual Wield', 0);
-    hasDW = AshitaCore:GetMemoryManager():GetPlayer():HasAbility(dw.Id);
-
     local player = gData.GetPlayer()
-    if (player.Status ~= 'Engaged') then
-        gFunc.EquipSet(sets.Idle)
+    local dw = AshitaCore:GetResourceManager():GetAbilityByName('Dual Wield', 0);
+    hasDW = AshitaCore:GetMemoryManager():GetPlayer():HasAbility(dw.Id) and gData.GetPlayer().SubJobLevel > 0;
 
-        if vars.currentWeapon[1] == weapons.naegling then
-            gFunc.EquipSet(sets.Naegling)
-        elseif vars.currentWeapon[1] == weapons.tauret then
-            gFunc.EquipSet(sets.Tauret)
-        end
+    gFunc.EquipSet(sets.Idle)
 
-        if hasDW then
-            gFunc.EquipSet(sets.Centovente)
-        end
+    if vars.currentWeapon[1] == weapons.naegling then
+        gFunc.EquipSet(sets.Naegling)
+    elseif vars.currentWeapon[1] == weapons.tauret then
+        gFunc.EquipSet(sets.Tauret)
+    end
 
-        if gData.GetPlayer().IsMoving then
-            gFunc.EquipSet(sets.IdleMovement)
-        end
-
+    if gData.GetPlayer().IsMoving then
+        gFunc.EquipSet(sets.IdleMovement)
+    else
         if gData.GetPlayer().HPP > 90 and gData.GetPlayer().HPP < 100 then
             gFunc.EquipSet(sets.IdleRegen)
         end
@@ -385,7 +389,9 @@ profile.HandleDefault = function ()
         if gData.GetPlayer().HPP > 95 and gData.GetPlayer().MPP < 100 then
             gFunc.EquipSet(sets.IdleRefresh)
         end
-    else
+    end
+
+    if (player.Status == 'Engaged') then
         gFunc.EquipSet(sets.TP)
 
         if vars.currentWeapon[1] == weapons.naegling then
