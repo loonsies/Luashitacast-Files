@@ -398,9 +398,9 @@ function drawUI()
                 end
             end
         end
+        imgui.PopFont()
     end
     imgui.End()
-    imgui.PopFont()
     imgui.PopStyleColor(1)
     imgui.PopStyleVar(5)
 end
