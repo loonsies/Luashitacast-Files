@@ -243,7 +243,12 @@ function drawUI()
         imgui.PopStyleVar(5)
         return
     end
-    imgui.SetWindowFontScale(looneydisplay.config.scale[1])
+
+    local defaultFont = imgui.GetFont()
+    local defaultSize = imgui.GetFontSize()
+    local scaledSize  = defaultSize * looneydisplay.config.scale[1]
+
+    imgui.PushFont(defaultFont, scaledSize)
 
     if looneydisplay.config.centered[1] then
         local displaySize = imgui.GetIO().DisplaySize
@@ -395,6 +400,7 @@ function drawUI()
         end
     end
     imgui.End()
+    imgui.PopFont()
     imgui.PopStyleColor(1)
     imgui.PopStyleVar(5)
 end
